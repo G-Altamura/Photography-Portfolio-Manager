@@ -1,0 +1,77 @@
+<!--ESERCIZIO 1: Gestore Portfolio Fotografico
+Descrizione del Progetto
+Sviluppare una **home page** per un fotografo professionista che permetta di visualizzare e gestire 
+un portfolio dinamico. La pagina deve includere una gallery responsive, filtro per categorie e lightbox 
+per immagini ad alta risoluzione.
+### Requisiti Funzionali
+1. **Lista Immagini**: Visualizza 12 immagini in griglia responsive (3-6 colonne)
+2. **Filtro Categorie**: Pulsanti per filtrare per "Natura", "Ritratto", "Architettura", "Tutte"
+3. **Lightbox Modal**: Clic su immagine apre overlay con zoom e frecce navigazione
+4. **Responsive Design**: Desktop, tablet, mobile (Android/iOS)
+5. **W3C Compliance**: HTML5 semantico e CSS3 moderno 
+┌─────────────────────────────────────┐
+│ HEADER: Logo + Nav Menu │
+├─────────────────────────────────────┤
+│ ASIDE: Filtri Categorie │ GALLERY: Griglia Immagini │
+│ │ Responsive 3-6 colonne │
+├─────────────────────────────────────┤
+│ FOOTER: Social + Copyright │
+└─────────────────────────────────────┘-->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 1</title>
+    <link rel="stylesheet" href="sources/style.css">
+    <script src="sources/script.js"></script>
+</head>
+<body onload="arrayAttivo()">
+    <header>
+        <a href="#" id="logo"><img src="img/logo.png" alt="logo"></a>
+        <h1>FotografoFittizio.com</h1>
+    </header>
+    <main>
+        <aside>
+            <h2>Filtra i lavori per categoria:</h2>
+            <button onclick="tendinaFiltro('natura')">Progetto Natura</button>
+            <button onclick="tendinaFiltro('ritratto')">Ritratto</button>
+            <button onclick="tendinaFiltro('paesaggio')">Paesaggio</button>
+            <button onclick="tendinaFiltro('natura'+'ritratto'+'paesaggio')">Tutte</button>
+        </aside>
+        <section>
+            <div id="freccia_sx"></div>
+            <div>
+                <img onclick="overlay('im1')" id="im1" class="imgfotografo" src="img/natura_1.jpg" alt="Due ricercatori davanti una serra">
+                <img onclick="overlay('im2')" id="im2" class="imgfotografo" src="img/natura_2.jpg" alt="Fiori viola in piazza">
+                <img onclick="overlay('im3')" id="im3" class="imgfotografo" src="img/paesaggio_1.jpg" alt="Un canyon in paesaggio desertico">
+                <img onclick="overlay('im4')" id="im4" class="imgfotografo" src="img/paesaggio_3.jpg" alt="Una strada in unbosco innevato">
+            </div>
+            <div>
+                <img onclick="overlay('im5')" id="im5" class="imgfotografo" src="img/paesaggio_4.jpg" alt="Un treno passa in un paesaggio brullo con montagne">
+                <img onclick="overlay('im6')" id="im6" class="imgfotografo" src="img/ritratto_2.jpg" alt="Una donna controlla un pc portatile nel mezzo di campi verdeggianti">
+                <img onclick="overlay('im7')" id="im7" class="imgfotografo" src="img/ritratto_3.jpg" alt="Un uomo controlla informazioni su un ipad dentro una serra">
+                <img onclick="overlay('im8')" id="im8" class="imgfotografo" src="img/ritratto_4.jpg" alt="Due ragazze danno un filo di pagna ad un cavallo curioso">
+            </div>
+            <div>
+                <img onclick="overlay('im9')" id="im9" class="imgfotografo" src="img/paesaggio_5.jpg" alt="un incrocio in una vivace strada in un paese asiatico">
+                <img onclick="overlay('im10')" id="im10" class="imgfotografo" src="img/ritratto_1.jpg" alt="Due donne guidano una jeep decappottabile, con due bambini che si affacciano da quello">
+                <img onclick="overlay('im11')" id="im11" class="imgfotografo" src="img/natura_3.jpg" alt="Un uomo e una donna scelgono attentamente delle zucche, a un banco di mercato">
+                <img onclick="overlay('im12')" id="im12" class="imgfotografo" src="img/paesaggio_2.jpg" alt="Una foto notturna, paesaggio innevato con tram solitario che passa">
+            </div>
+            <div id="freccia_dx"></div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li><h3>Seguici sui nostri social:</h3></li>
+                <li><a href="#"><img src="img/Facebook.png" alt="logo Facebook"></a></li>
+                <li><a href="#"><img src="img/Twitter.png" alt="logo Twitter"></a></li>
+                <li><a href="#"><img src="img/WhatsApp.png" alt="logo whattsapp"></a></li>
+            </ul>
+        </div>
+    </footer>        
+    <p>@Copyright by Me, 2025</p>
+</body>
+</html>
