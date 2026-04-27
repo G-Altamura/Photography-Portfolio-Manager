@@ -1,8 +1,9 @@
 # Photography Portfolio Manager
 Photography Portfolio Manager A responsive front-end project that showcases a dynamic photography portfolio. It features a grid-based gallery, category filtering, and a lightbox modal for viewing high-resolution images. Built with semantic HTML5 and modern CSS3, with a strong focus on responsiveness and clean layout.
 
-# Project Description 
+# Live Demo 
 [My Project](https://g-altamura.github.io/Photography-Portfolio-Manager/)
+
 # Project Description 
  
 Develop a home page for a professional photographer that allows viewing and managing  a dynamic portfolio. 
